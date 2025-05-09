@@ -138,23 +138,14 @@ All instances emit events via `on`, `once`, `off`:
 
 ---
 
-## 🔒 Durability
-
-See [Durability](#durability) section in source for details on `syncOnWrite` modes and flush behavior.
-
----
-
 ## 🗄️ Compaction & Checkpointing
 
 Automatic or manual maintenance tasks to reclaim space and merge WAL.
-
----
 
 ## 🛠️ Contributing
 
 Contributions welcome! Please open issues or PRs. Follow standard GitHub workflow.
 
----
 
 ## 📜 License
 
