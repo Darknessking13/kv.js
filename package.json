@@ -1,43 +1,40 @@
 {
-    "name": "@kv/js",
+    "name": "kvbits",
     "version": "0.0.1",
     "description": "A persistent key-value database for Node.js with Write-Ahead Logging, TTL, and compaction.",
     "main": "src/main.js",
     "directories": {
-      "lib": "src"
+        "lib": "src"
     },
     "scripts": {
-      "benchmark": "node benchmark/benchmark.js",
-      "example": "node examples/example.js",
-      "start": "node examples/example.js"
+        "benchmark": "node benchmark/benchmark.js",
+        "example": "node examples/example.js",
+        "start": "node examples/example.js"
     },
     "repository": {
-      "type": "git",
-      "url": "https://github.com/Darknessking13/kv.js"
+        "type": "git",
+        "url": "git+https://github.com/Darknessking13/kv.js.git"
     },
     "keywords": [
-      "kv",
-      "key-value",
-      "database",
-      "persistent",
-      "embedded",
-      "nodejs",
-      "wal",
-      "ttl",
-      "compaction",
-      "localstorage",
-      "cache"
+        "kv",
+        "key-value",
+        "database",
+        "persistent",
+        "embedded",
+        "nodejs",
+        "wal",
+        "ttl",
+        "compaction",
+        "localstorage",
+        "cache"
     ],
     "author": "i._.became_a_devil",
     "license": "Apache 2.0",
     "bugs": {
-      "url": "https://github.com/yourusername/kv-store-js/issues"
+        "url": "https://github.com/Darknessking13/kv.js/issues"
     },
-    "homepage": "https://github.com/yourusername/kv-store-js#readme",
+    "homepage": "https://github.com/Darknessking13/kv.js#readme",
     "engines": {
-      "node": ">=14.0.0"
-    },
-    "files": [
-      "src/"
-    ]
-  }
+        "node": ">=14.0.0"
+    }
+}

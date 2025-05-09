@@ -1,4 +1,4 @@
-# @kv/js
+# kvbits
 
 A persistent key-value database for Node.js with Write-Ahead Logging, TTL, and compaction.
 
@@ -25,13 +25,13 @@ A persistent key-value database for Node.js with Write-Ahead Logging, TTL, and c
 Install via npm:
 
 ```bash
-npm install @kv/js
+npm install kvbits
 ```
 
 Or yarn:
 
 ```bash
-yarn add @kv/js
+yarn add kvbits
 ```
 
 ---
@@ -40,7 +40,7 @@ yarn add @kv/js
 
 ```javascript
 // CommonJS
-const { KV, AsyncKV } = require('@kv/js');
+const { KV, AsyncKV } = require('kvbits');
 const path = require('path');
 
 // Synchronous API

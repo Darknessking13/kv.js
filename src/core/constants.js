@@ -1,4 +1,4 @@
-// kv-store/constants.js
+// src/core/constants.js
 const TYPE_NULL = 0;
 const TYPE_UNDEFINED = 1;
 const TYPE_BOOLEAN = 2;

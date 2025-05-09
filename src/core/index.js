@@ -1,4 +1,4 @@
-// kv-store/index.js
+// src/core/index.js
 const fs = require('fs');
 const path = require('path');
 const { WAL_OP_SET, WAL_OP_DELETE, WAL_ENTRY_HEADER_SIZE } = require('./constants');

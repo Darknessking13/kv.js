@@ -1,5 +1,5 @@
 /**
- * @kv/js - A lightning fast and ultra lightweight persistent key-value database for Node.js
+ * kvbits - A lightning fast and ultra lightweight persistent key-value database for Node.js
  * Features:
  * - Automatic persistence
  * - Optimized for high throughput
@@ -7,7 +7,7 @@
  * - TTL support (time-to-live for entries)
  */
 
-// kv-store/main.js
+// src/main.js
 const KV = require('./core/kv-core');
 const AsyncKV = require('./core/async-kv');
 

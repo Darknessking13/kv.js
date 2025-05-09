@@ -1,4 +1,4 @@
-// kv-store/storage.js
+// src/storage/storage.js
 const fs = require('fs');
 const {
   TYPE_NULL, TYPE_UNDEFINED, TYPE_BOOLEAN, TYPE_NUMBER,

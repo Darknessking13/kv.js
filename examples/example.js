@@ -1,5 +1,4 @@
 // example.js
-// Import the KV library
 const { KV, AsyncKV } = require('../src/main.js');
 
 // Example 1: Basic Usage (Synchronous API)

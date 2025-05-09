@@ -1,9 +1,9 @@
 const fs = require('fs');
 const path = require('path');
-const { KV, AsyncKV } = require('../src/main.js'); // Assuming kv.js is in the same directory
+const { KV, AsyncKV } = require('../src/main.js');
 
 const NUM_OPERATIONS_SMALL = 10000;
-const NUM_OPERATIONS_LARGE = 50000; // For less frequent, more I/O bound tests
+const NUM_OPERATIONS_LARGE = 50000; 
 
 const DATA_DIR = './benchmark_data';
 const LOG_FILE = './benchmark_results.log';
@@ -66,7 +66,6 @@ async function runBenchmarkSuite() {
   // const largePayload = { data: 'X'.repeat(1024 * 4) }; // 4KB payload for some tests
 
 
-  // === Synchronous KV Benchmarks ===
   logResult('\n=== Synchronous KV (syncOnWrite: false, periodicFlush: 60s) ===');
   let kvSyncDefault;
   const kvSyncDefaultOptions = {
@@ -96,10 +95,8 @@ async function runBenchmarkSuite() {
         kvSyncDefault.get(`key:${i}`);
       }
     }
-    // No pre/post, uses existing DB state
   );
 
-  // For cold cache get, we need to re-init the DB without preload
   kvSyncDefault.close();
   kvSyncDefault = new KV({...kvSyncDefaultOptions, preload: false}); // Re-open with preload false
 
@@ -110,7 +107,7 @@ async function runBenchmarkSuite() {
         kvSyncDefault.get(`key:${i}`);
       }
     },
-    null, // DB already re-opened correctly
+    null, 
     null
   );
 
@@ -123,7 +120,7 @@ async function runBenchmarkSuite() {
       }
       await kvSyncDefault.flush(false); // Manual flush
     },
-    null, // Uses existing DB state
+    null, 
     () => { kvSyncDefault.close(); cleanupDbFiles('sync_default_kv'); }
   );
 
@@ -145,7 +142,6 @@ async function runBenchmarkSuite() {
       for (let i = 0; i < numOpsSyncTrue; i++) {
         kvSyncTrue.set(`key:${i}`, { ...smallPayload, id: i });
       }
-      // No explicit flush needed, syncOnWrite handles it
     },
     () => { cleanupDbFiles('sync_true_kv'); kvSyncTrue = new KV(kvSyncTrueOptions); }
   );
@@ -201,7 +197,7 @@ async function runBenchmarkSuite() {
       for (let i = 0; i < numOpsAsync; i++) {
         await asyncKv.set(`key:${i}`, { ...smallPayload, id: i });
       }
-      await asyncKv.flush(); // Manual flush
+      await asyncKv.flush(); 
     },
     () => { cleanupDbFiles('async_kv'); asyncKv = new AsyncKV(asyncKvOptions); }
   );
@@ -215,7 +211,7 @@ async function runBenchmarkSuite() {
     }
   );
 
-  asyncKv.close(); // Close to clear memory cache for cold read test
+  asyncKv.close(); 
   asyncKv = new AsyncKV({...asyncKvOptions, preload: false});
 
 
@@ -244,12 +240,6 @@ async function runBenchmarkSuite() {
   logResult('\n' + '='.repeat(100));
   logResult('Benchmark suite complete.');
   logResult(`Results also logged to: ${LOG_FILE}`);
-
-  // Optional: Clean up the entire benchmark_data directory
-  // if (fs.existsSync(DATA_DIR)) {
-  //   fs.rmSync(DATA_DIR, { recursive: true, force: true });
-  //   logResult('Cleaned up benchmark_data directory.');
-  // }
 }
 
 runBenchmarkSuite().catch(err => {

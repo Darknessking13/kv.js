@@ -1,4 +1,4 @@
-// kv-store/kv-core.js
+// src/core/kv-core.js
 const fs = 'fs'; // Placeholder, fs operations are now in Storage/IndexManager
 const path = require('path');
 const EventEmitter = require('events');

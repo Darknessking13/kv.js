@@ -1,4 +1,4 @@
-// kv-store/async-kv.js
+// src/core/async-kv.js
 const EventEmitter = require('events'); // Needed if AsyncKV itself emits its own lifecycle events
 const KVCore = require('./kv-core');
 
