@@ -2,7 +2,7 @@
 
 A persistent key-value database for Node.js with Write-Ahead Logging, TTL, and compaction.
 
-[![npm version](https://badge.fury.io/js/%40kv%2Fjs.svg)](https://badge.fury.io/js/%40kv%2Fjs)  [![License: Apache](https://img.shields.io/badge/License-Apache-yellow.svg)](https://opensource.org/licenses/Apache) [![kv.js](https://github.com/Darknessking13/kv.js/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/Darknessking13/kv.js/actions/workflows/npm-publish.yml)
+[![npm version](https://badge.fury.io/js/%40kv%2Fjs.svg)](https://badge.fury.io/js/%40kv%2Fjs)  [![License: Apache](https://img.shields.io/badge/License-Apache-yellow.svg)](https://opensource.org/licenses/Apache)
 
 ---
 
